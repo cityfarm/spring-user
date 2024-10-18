@@ -1,0 +1,14 @@
+
+
+Controller
+	UserController
+		add(): /user
+
+Service
+
+
+Repository
+	interface UserRepository extends JpaRepository{}
+
+Model
+	User{}
