@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.Date;
 
+// note: code theo huong dan #devteria
 @Entity
 @Table
 public class User {

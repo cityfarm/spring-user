@@ -1,6 +1,7 @@
 package com.sifu.learnsb.controller;
 
 import com.sifu.learnsb.dto.request.UserCreationRequest;
+import com.sifu.learnsb.dto.request.UserUpdateRequest;
 import com.sifu.learnsb.model.User;
 import com.sifu.learnsb.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,9 +31,14 @@ public class UserController {
         return userService.getUser(userId);
     }
 
-//    @PutMapping("/{UserId}")
+    @PutMapping("/{userId}")
+    User updateUser(@PathVariable Long userId, @RequestBody UserUpdateRequest request){
+        return userService.updateUser(userId,request);
+    }
+
     @DeleteMapping("/{userId}")
-    void deleteUser(@PathVariable("userId") Long userId) {
+    String deleteUser(@PathVariable("userId") Long userId) {
         userService.deleteUser(userId);
+        return "User deleted";
     }
 }
