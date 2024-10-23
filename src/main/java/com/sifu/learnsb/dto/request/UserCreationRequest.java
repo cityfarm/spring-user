@@ -1,5 +1,7 @@
 package com.sifu.learnsb.dto.request;
 
+import jakarta.validation.constraints.Size;
+
 import java.util.Date;
 
 public class UserCreationRequest {
@@ -7,7 +9,11 @@ public class UserCreationRequest {
     private String name;
     private Date birthday;
     private double salary;
+
+    @Size(min = 3, message = "Username is at least 3 characters!")
     private String username;
+
+    @Size(min = 8, message = "Password is at least 8 characters!")
     private String password;
 
     public String getName() {

@@ -2,6 +2,8 @@ package com.sifu.learnsb.service;
 
 import com.sifu.learnsb.dto.request.UserCreationRequest;
 import com.sifu.learnsb.dto.request.UserUpdateRequest;
+import com.sifu.learnsb.exception.AppException;
+import com.sifu.learnsb.exception.ErrorCode;
 import com.sifu.learnsb.model.User;
 import com.sifu.learnsb.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,12 @@ public class UserService {
 
     public User createUser(UserCreationRequest request) {
         User user = new User();
+
+        // xu ly except
+        if (userRepository.existsByUsername(request.getUsername())) {
+            throw new AppException(ErrorCode.USER_EXISTED);
+        }
+
         user.setName(request.getName());
         user.setBirthday(request.getBirthday());
         user.setSalary(request.getSalary());

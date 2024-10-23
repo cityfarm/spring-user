@@ -1,9 +1,11 @@
 package com.sifu.learnsb.controller;
 
+import com.sifu.learnsb.dto.request.ApiResponse;
 import com.sifu.learnsb.dto.request.UserCreationRequest;
 import com.sifu.learnsb.dto.request.UserUpdateRequest;
 import com.sifu.learnsb.model.User;
 import com.sifu.learnsb.service.UserService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,8 +19,10 @@ public class UserController {
     private UserService userService;
 
     @PostMapping
-    User createUser(@RequestBody UserCreationRequest request) {
-        return userService.createUser(request);
+    ApiResponse<User> createUser(@RequestBody @Valid UserCreationRequest request) {
+        ApiResponse<User> apiResponse = new ApiResponse<>();
+        apiResponse.setResult(userService.createUser(request));
+        return apiResponse;
     }
 
     @GetMapping
