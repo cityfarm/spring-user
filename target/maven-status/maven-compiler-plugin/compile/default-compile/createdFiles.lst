@@ -4,9 +4,14 @@ com\sifu\learnsb\dto\request\UserCreationRequest.class
 com\sifu\learnsb\exception\GlobalExceptionHandler.class
 com\sifu\learnsb\exception\AppException.class
 com\sifu\learnsb\exception\ErrorCode.class
+com\sifu\learnsb\mapper\UserMapperImpl.class
+com\sifu\learnsb\dto\request\ApiResponse$ApiResponseBuilder.class
 com\sifu\learnsb\LearnsbApplication.class
+com\sifu\learnsb\dto\request\UserCreationRequest$UserCreationRequestBuilder.class
 com\sifu\learnsb\controller\UserController.class
+com\sifu\learnsb\dto\request\UserUpdateRequest$UserUpdateRequestBuilder.class
 com\sifu\learnsb\dto\request\UserUpdateRequest.class
 com\sifu\learnsb\model\User.class
 com\sifu\learnsb\service\UserService.class
 com\sifu\learnsb\dto\request\ApiResponse.class
+com\sifu\learnsb\mapper\UserMapper.class

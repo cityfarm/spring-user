@@ -7,6 +7,7 @@ D:\2024 Java\learnsb\src\main\java\com\sifu\learnsb\exception\AppException.java
 D:\2024 Java\learnsb\src\main\java\com\sifu\learnsb\exception\ErrorCode.java
 D:\2024 Java\learnsb\src\main\java\com\sifu\learnsb\exception\GlobalExceptionHandler.java
 D:\2024 Java\learnsb\src\main\java\com\sifu\learnsb\LearnsbApplication.java
+D:\2024 Java\learnsb\src\main\java\com\sifu\learnsb\mapper\UserMapper.java
 D:\2024 Java\learnsb\src\main\java\com\sifu\learnsb\model\User.java
 D:\2024 Java\learnsb\src\main\java\com\sifu\learnsb\repository\UserRepository.java
 D:\2024 Java\learnsb\src\main\java\com\sifu\learnsb\service\UserService.java

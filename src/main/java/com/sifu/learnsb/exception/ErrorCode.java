@@ -1,7 +1,11 @@
 package com.sifu.learnsb.exception;
 
 public enum ErrorCode {
-    USER_EXISTED(1001, "User existed")
+    UNCATEGORIZED_EXCEPTION(9999,"Uncategorized error"),
+    USER_EXISTED(1002, "User existed"),
+    INVALID_KEY(1001, "Invalid key"),
+    USERNAME_INVALID(1003,"USERNAME_INVALID"),
+    PASSWORD_INVALID(1004,"PASSWORD_INVALID"),
     ;
 
     ErrorCode(int code, String message) {
