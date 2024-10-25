@@ -6,6 +6,7 @@ public enum ErrorCode {
     INVALID_KEY(1001, "Invalid key"),
     USERNAME_INVALID(1003,"USERNAME_INVALID"),
     PASSWORD_INVALID(1004,"PASSWORD_INVALID"),
+    USER_NOT_EXISTED(1005,"User not existed" ),
     ;
 
     ErrorCode(int code, String message) {

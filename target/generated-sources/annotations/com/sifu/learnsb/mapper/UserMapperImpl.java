@@ -2,13 +2,14 @@ package com.sifu.learnsb.mapper;
 
 import com.sifu.learnsb.dto.request.UserCreationRequest;
 import com.sifu.learnsb.dto.request.UserUpdateRequest;
+import com.sifu.learnsb.dto.response.UserResponse;
 import com.sifu.learnsb.model.User;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-10-24T23:11:34+0700",
+    date = "2024-10-25T19:40:41+0700",
     comments = "version: 1.6.2, compiler: javac, environment: Java 17.0.12 (Oracle Corporation)"
 )
 @Component
@@ -20,30 +21,44 @@ public class UserMapperImpl implements UserMapper {
             return null;
         }
 
-        User user = new User();
+        User.UserBuilder user = User.builder();
 
-        user.setName( request.getName() );
-        user.setBirthday( request.getBirthday() );
-        user.setSalary( request.getSalary() );
-        user.setUsername( request.getUsername() );
-        user.setPassword( request.getPassword() );
+        user.name( request.getName() );
+        user.birthday( request.getBirthday() );
+        user.salary( request.getSalary() );
+        user.username( request.getUsername() );
+        user.password( request.getPassword() );
 
-        return user;
+        return user.build();
     }
 
     @Override
-    public UserUpdateRequest toUserUpdateRequest(User user) {
+    public UserResponse toUserResponse(User user) {
         if ( user == null ) {
             return null;
         }
 
-        UserUpdateRequest.UserUpdateRequestBuilder userUpdateRequest = UserUpdateRequest.builder();
+        UserResponse.UserResponseBuilder userResponse = UserResponse.builder();
 
-        userUpdateRequest.name( user.getName() );
-        userUpdateRequest.birthday( user.getBirthday() );
-        userUpdateRequest.salary( user.getSalary() );
-        userUpdateRequest.password( user.getPassword() );
+        userResponse.id( user.getId() );
+        userResponse.name( user.getName() );
+        userResponse.birthday( user.getBirthday() );
+        userResponse.salary( user.getSalary() );
+        userResponse.username( user.getUsername() );
+        userResponse.password( user.getPassword() );
 
-        return userUpdateRequest.build();
+        return userResponse.build();
+    }
+
+    @Override
+    public void updateUser(User user, UserUpdateRequest request) {
+        if ( request == null ) {
+            return;
+        }
+
+        user.setName( request.getName() );
+        user.setBirthday( request.getBirthday() );
+        user.setSalary( request.getSalary() );
+        user.setPassword( request.getPassword() );
     }
 }
