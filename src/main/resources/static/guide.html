@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+<h1>API Test Guide</h1>
+<h2>1. User API (/api/users)</h2>
+<h3>1.1 Create User</h3>
+<pre>POST /api/users
+    Request Body:
+    {
+      "username": "string",
+      "password": "string",
+    }</pre>
+<p>Tạo một người dùng mới.</p>
+
+<h3>1.2 Get All Users</h3>
+<pre>GET /api/users</pre>
+<p>Lấy toàn bộ danh sách người dùng.</p>
+
+<h3>1.3 Get User by ID</h3>
+<pre>GET /api/users/{userId}</pre>
+<p>Lấy thông tin người dùng theo ID.</p>
+
+<h3>1.4 Update User</h3>
+<pre>PUT /api/users/{userId}
+    Request Body:
+    {
+      "username": "string",
+      "password": "string",
+    }</pre>
+<p>Cập nhật thông tin người dùng.</p>
+
+<h3>1.5 Delete User</h3>
+<pre>DELETE /api/users/{userId}</pre>
+<p>Xóa người dùng theo ID.</p>
+
+<h2>2. Authentication API (/auth)</h2>
+<h3>2.1 Get Token</h3>
+<pre>POST /auth/token
+    Request Body:
+    {
+      "username": "string",
+      "password": "string"
+    }</pre>
+<p>Trả về token khi xác thực thành công.</p>
+
+<h3>2.2 Introspect Token</h3>
+<pre>POST /auth/introspect
+    Request Body:
+    {
+      "token": "string"
+    }</pre>
+<p>Kiểm tra trạng thái token.</p>
+</body>
+</html>

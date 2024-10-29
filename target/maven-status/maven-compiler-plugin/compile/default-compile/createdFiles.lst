@@ -17,6 +17,7 @@ com\sifu\learnsb\exception\GlobalExceptionHandler.class
 com\sifu\learnsb\dto\request\IntrospectRequest$IntrospectRequestBuilder.class
 com\sifu\learnsb\exception\AppException.class
 com\sifu\learnsb\exception\ErrorCode.class
+com\sifu\learnsb\controller\HomeController.class
 com\sifu\learnsb\LearnsbApplication.class
 com\sifu\learnsb\dto\response\AuthenticationResponse$AuthenticationResponseBuilder.class
 com\sifu\learnsb\controller\UserController.class
