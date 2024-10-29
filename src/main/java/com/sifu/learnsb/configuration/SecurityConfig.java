@@ -27,6 +27,7 @@ public class SecurityConfig {
         httpSecurity.authorizeHttpRequests(requests ->
                 requests.requestMatchers(HttpMethod.POST, PUBLIC_ENDPOINTS)
                         .permitAll()
+                        .requestMatchers("/guide.html", "/login.html", "/static/**").permitAll() // Cho phép truy cập guide.html
                         .anyRequest().authenticated());
 
 
