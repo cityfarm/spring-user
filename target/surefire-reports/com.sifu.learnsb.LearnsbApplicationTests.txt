@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.sifu.learnsb.LearnsbApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.52 s -- in com.sifu.learnsb.LearnsbApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.82 s -- in com.sifu.learnsb.LearnsbApplicationTests

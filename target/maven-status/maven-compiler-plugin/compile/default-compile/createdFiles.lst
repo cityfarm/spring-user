@@ -23,6 +23,7 @@ com\sifu\learnsb\dto\response\AuthenticationResponse$AuthenticationResponseBuild
 com\sifu\learnsb\controller\UserController.class
 com\sifu\learnsb\dto\request\UserUpdateRequest$UserUpdateRequestBuilder.class
 com\sifu\learnsb\dto\response\AuthenticationResponse.class
+com\sifu\learnsb\configuration\SecurityConfig.class
 com\sifu\learnsb\dto\request\AuthenticationRequest$AuthenticationRequestBuilder.class
 com\sifu\learnsb\dto\request\UserUpdateRequest.class
 com\sifu\learnsb\dto\response\IntrospectResponse$IntrospectResponseBuilder.class
